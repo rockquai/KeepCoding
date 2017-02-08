@@ -49,3 +49,27 @@
 : `ES6` 문법을 `bable`를 통해서 `ES5`로 치환된 코드로 사용한다. (ES6 인식하지 못한 브라우저를 위해)
 - `코드 리뷰`  
 [코드 리뷰, 어디까지 해봤니?] (http://tech.kakao.com/2016/02/04/code-review/)
+- `의존 모듈 주입(Dependency Module Injection)`
+---
+
+- [`Lazy Loading(느린 로딩)`] (http://endic.naver.com/userEntry.nhn?sLn=kr&entryId=5348f31a01b4e03bd257ee26c3e99447) 
+	- 느린 로딩 또는 지연된 로딩 기법 <br>
+	- 어플리케이션에서 메모리를 `효율적으로 관리`하기 위해 오브젝트의 인스턴스를 한번에 모두 메모리에 생성하지 않고, 필요시 생성하는 기법을 의미한다.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

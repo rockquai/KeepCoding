@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>callback 함수</title>
+</head>
+<body>
+
+<script>
+	// ex1
+	function a() {
+		window.addEventListener('load', function(event) {
+			console.log('콜백함수 결과: ', event.target);
+		});
+	}
+
+	function b() {
+		return console.log('b함수이다');
+	}
+
+	for ( var i = 0; i<10; i++ ) {
+		console.log(i);
+	}
+
+	a();
+	b();
+
+
+	// ex2
+	function ajaxFunc() {
+		var oReq = new XMLHttpRequest();
+
+		console.log('1');
+
+		oReq.addEventListener("load", function(event) {
+			console.log('5');
+			console.log(this.responseText);
+		});
+
+		console.log('2');
+			oReq.open("GET", "./data/example.txt");
+		console.log('3');
+			oReq.send(); 
+		console.log('4');
+		return true;
+	}
+
+	ajaxFunc();
+
+</script>
+
+</body>
+</html>

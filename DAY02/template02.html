@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>template</title>
+</head>
+<body>
+
+	<div class="showdata"></div>
+
+<script>
+	// 동적으로 데이터 삽입 - 간단한 데이터 삽입
+	// 템플릿이란? html와 data를 합쳐서 화면에 빠르게 넣을 수 있다.
+	
+	// ex1.
+	var dataFromServer = {'name' : 'Mac', 'since' : '2017'};
+	var myStr = '<span>{{name}}</span>';
+
+	// replace() => 첫번째 인자 : 바꾸고 싶은 문자열
+	var resultHTML = myStr.replace('{{name}}', dataFromServer.name);
+	console.log(resultHTML); // <span>Mac</span>
+
+
+	// ex2. 
+	// 서버에서 받은 데이터가 유동적으로 교체가 되었을 때. 용이.
+	var dataFromServer = {'name' : 'Mac', 'since' : '2017'};
+	var myStr = '<span>{{name}}</span>';
+	
+	var resultHTML = myStr.replace('{{name}}', dataFromServer.name);
+	var baseElement = document.querySelector('.showdata');
+	
+	baseElement.innerHTML = resultHTML;
+
+	
+</script>
+
+</body>
+</html>

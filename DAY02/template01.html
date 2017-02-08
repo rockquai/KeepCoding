@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>template</title>
+</head>
+<body>
+<script>
+	// String replace() Method
+	// ex1.
+	var myStr = 'MacBook Pro!';
+	var air = myStr.replace('Pro', 'Air');
+	console.log(air); // MacBook Air!
+
+	// ex2.
+	var myStr = 'MacBook Pro!';
+	var air = myStr.replace(/Pro/, 'Air');
+	console.log(air); // MacBook Air!
+
+	// ex3. 정규표현식
+	// \s  : 공백
+	// \w+ : 문자 하나 이상 
+	var myStr = 'MacBook Pro!';
+	var air = myStr.replace(/\s\w+/, ' Air');
+	console.log(air); // MacBook Air!
+
+	// ex4.
+	var myStr = '<span>{{name}}</span>';
+	var air = myStr.replace('{{name}}', 'Air');
+	console.log(air); //<span>air</span>
+</script>
+
+</body>
+</html>

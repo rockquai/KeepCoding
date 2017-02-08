@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>template</title>
+</head>
+<body>
+
+	<div class="showdata"></div>
+
+<script>
+	// 동적으로 데이터 삽입 - 복잡한 html 놓는 경우 
+	// ul>li 태그를 이용해서 넣는 경우 
+	// 좀 더 복잡한 경우에는 템플릿 라이브러리를 사용하고
+	// 단순한 경우에는 아래와 같이 사용한다.
+
+	var dataFromServer = [
+		{'name' : 'Mac pro', 'since' : '2017-1'},
+		{'name' : 'Mac air', 'since' : '2017-2'},
+		{'name' : 'apple watch', 'since' : '2017-3'},
+		{'name' : 'apple ipad', 'since' : '2017-4'}
+	];
+	
+	var myStr = '<li>{{name}}</li>';
+	var resultHTML = '<ul>';
+
+	for ( var i = 0; i<dataFromServer.length; i++ ) {
+		resultHTML += myStr.replace('{{name}}', dataFromServer[i].name);
+	}
+
+	resultHTML += '</ul>';
+
+	var baseElement = document.querySelector('.showdata');
+	baseElement.innerHTML = resultHTML;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>event </title>
+</head>
+<body>
+  <div class="container">
+    <ul class="tab-list">
+      <li>
+        <a href="#">menu1</a>
+      </li>
+      <li>
+        <a href="#">menu2</a>
+      </li>
+      <li>
+        <a href="#">menu3</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // 1. 부모 이벤트 - 이벤트 위임
+    (function() {
+      var tabList = document.querySelector('.tab-list');
+
+      function eventMenu(event) {
+          console.log('event.target', event.target);
+          console.log('this', this);
+      }
+
+      tabList.addEventListener('click', eventMenu);
+    })();
+
+    // 2. 각자 자식 이벤트
+    // (function() {
+    //     var tabList = document.querySelector('.tab-list');
+    //     var liFirst = tabList.querySelector('li:nth-child(1) > a');
+    //     var liSecond = tabList.querySelector('li:nth-child(2) > a');
+    //     var liThird = tabList.querySelector('li:nth-child(3) > a');
+
+    //     function eventMenu(event) {
+    //         console.log(event.target);
+    //         console.log(this);
+    //     }
+
+    //     liFirst.addEventListener('click', eventMenu);
+    //     liSecond.addEventListener('click', eventMenu);
+    //     liThird.addEventListener('click', eventMenu);
+    // })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
