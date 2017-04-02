@@ -1,7 +1,7 @@
 ###### KeepCoding Study
 
-## 하코사 프론트엔드 개발 스터디
-###INDEX
+## FED - 하코사 프론트엔드 개발 스터디
+### INDEX
 
 - [DAY01](./FED/DAY01/README.md)<br>
 	- 값, 식을 구분 하고 적절하게 사용 할 수 있다. <br>
@@ -15,7 +15,8 @@
 	- falsy VS truthy
 	- Hoisting
 	- Closures
+	- Array
 
 ---
 
-## 라떼스크립트 스터디
+## LatteScript - 라떼스크립트 스터디

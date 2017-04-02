@@ -19,7 +19,7 @@
 > API(Application Programming Interface, 응용 프로그램 프로그래밍 인터페이스) 
 : 응용 프로그램에서 사용할 수 있도록, 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스를 뜻한다. 주로 파일 제어, 창 제어, 화상 처리, 문자 제어 등을 위한 인터페이스를 제공
 
-- 하드웨어 <-> 윈도우 <-> 브라우저... => 각각 `API`를 제공하고 그것을 부르는 말이 레이어.
+- 하드웨어 <-> 윈도우 <-> 브라우저... => 각각 `API` 제공
 - 브라우저에서 제공하는 API : 캔버를 이용하여 3D. 브라우저의 GPU를 바로 사용하기 때문에 CSS3가 빠르다. 
 
 ---
@@ -88,7 +88,7 @@ function f(money) {
 
 // B.
 function f(money1, money2) {
-	if (money > abc) {
+	if (money1 > money2) {
 		return '콜라';
 	} else {
 		return '사이다';
@@ -97,7 +97,7 @@ function f(money1, money2) {
 
 //C. 
 function f(money1, money2) {
-	return money > abc ? beverage1(money) : beverage2();
+	return money1 > money2 ? beverage1(money) : beverage2();
 }
 ```
 
