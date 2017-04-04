@@ -4,22 +4,17 @@
 
 ##### [출처-http://workshop.benzen.io/](https://www.youtube.com/watch?v=lrWytzsH8hw&t=2309s)
 
+## [객체지향 프로그래밍(Object-oriented programming)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- 추상화(Abstraction) : 복잡한 상속, 메서드, 객체의 속성의 결합은 반드시 현실 세계를 시뮬레이션할 수 있어야 한다.
+- 캡슐화(Encapsulation) : 클래스는 해당 객체의 특성들만을 정의할 수 있고, 메서드는 그 메서드가 어떻게 실행되는지만 정의할 수 있다. (외부 접근 불가)
+- 상속성(Inheritance) : 클래스는 다른 클래스로부터 특성들을 상속받을 수 있다.
+- 다형성(Polymorphism) : 다른 클래스들이 같은 메서드나 속성으로 정의될 수 있다.
+
 ### OOP의 꽃은 
 - 사람이 코드를 이해하기 쉽도록 읽고, 쓰고, 확장하는데 human readable.
 - 핵심은 현실의 사물, 개념을 모델링할 수 있는 장점.
 - 추상적인 개념을 모델링을 할 방법이 필요함 <br>
 => 예. 강아지, 고양이, 호랑이... => 동물! => 생명체. <br>
-
-#### 상속(extendsion) 
-```js
-class Life {}
-class Animal extends Life {}
-class Dog extends Animal {}
-```
-
-- `Dog - Animal - Life` 설계도의 속성들이 상속, 덮어쓰기됨!
-- `var dog1 = new Dog();` dog1은 Dog, Animal, Life의 instance methods, property를 모두 상속을 받음.
-- 메소드를 작성하여 인스턴스끼리 공유
 
 ### [미션] 가계부
 - 함수단위 프로그래밍
@@ -123,4 +118,67 @@ ac1.deposit('월급', -150);
 var ac2 = new AccoutBook('장부2', 'B군');
 
 AccoutBook.printAll();
+```
+
+#### 상속성(Inheritance) & 다형성(Polymorphism) 
+```js
+class Life {}
+class Animal extends Life {}
+class Dog extends Animal {}
+```
+
+- `Dog - Animal - Life` 설계도의 속성들이 상속, 덮어쓰기됨!
+- `var dog1 = new Dog();` dog1은 Dog, Animal, Life의 instance methods, property를 모두 상속을 받음.
+- 메소드를 작성하여 인스턴스끼리 공유
+
+```js
+class Animal {
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+	speak() {
+		console.log(`I am an animal, ${this.name}`);
+	}
+	smile() {
+		console.log(`haha`);
+	}
+}
+
+class Dog extends Animal {
+	constructor(name, age, race) {
+		// this.name = name;
+		// this.age = age;
+
+		// Dog가 상속받고 있는 `Animal클래스`에 생성자를 이용하고 싶을 때는 예약어 `super()` 사용.  
+		super(name, age); 
+		this.race = race;
+	}
+	
+	// `speak()` 자체를 덮여쓸 수 있다.(상속받는 속성, 메소드를 덮여쓸 수 있다.) => `메소드 오버라이딩,(method overriding)`이라고 부른다
+	speak() {
+		super.speak();  // 부모 클래스의 메소드를 호출 할 수도 있다.
+		console.log(`Bark! bark!, ${this.name}`);
+	}
+}
+
+class Cat extends Animal {
+	// constructor 생략하면 조상 클래스인 constructor가 적용이 된다
+	speak() {
+		super.speak();
+		console.log(`meow! meow!, ${this.name}`);
+	}
+}
+ 
+var animals = [
+	new Dog('멍멍이', 11, '포메라니안'),
+	new Cat('야옹이', 10)
+];
+
+for ( var i = 0; i<animals.length; i++ ) {
+	var animal = animals[i];
+	// animal의 공통 메소드는 speak(), smile()
+	animal.speak();
+	animal.smile();
+}
 ```
