@@ -51,7 +51,7 @@
 > 플랫폼의 특성 인지 필요! <br>
 `document.getElementById()`, `alert()`, prompt()...  => 플랫폼이 달라지면 사용 못한다. <br>
 "자바스크립트를 공부한다고 해놓고 document.getElementById() 를 하고 있다면 분명 문제가 있다." <br>
-- [관련내용] (http://cafe.naver.com/hacosa/162050) <br>
+- [관련내용](http://cafe.naver.com/hacosa/162050) <br>
 
 ### JavaScript
 - `JavaScript`는 `HTML`, `CSS`는 아무런 관계가 없다

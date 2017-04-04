@@ -103,7 +103,7 @@ function f(money1, money2) {
 
 ---
 
-### [Hoisting] (https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
+### [Hoisting](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
 - 모든 변수(var)는 해당 영역(Scope)의 맨 윗부분으로 끌어올려(Hoist)진다. 
 
 ```js
@@ -163,7 +163,7 @@ if ( '' ) {
 
 ---
 
-### [Closures] (https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures)
+### [Closures](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures)
 - 함수내에서 외부 변수를 접근하는 것을 `Closure`
 - 스코프 체이닝을 통해서 변수를 찾기 때문에 성능이슈 발생. 지역변수화 하면 된다. 
 
