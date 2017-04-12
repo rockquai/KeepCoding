@@ -4,8 +4,7 @@
  * --------------------------------------------------------------------
  * [미션] 도형 Figure
  * - 타원 Oval, 원 Circle, 직사각형 Rectangle, 사다리꼴 Rect, 정사각형 Square, 
-     삼각형 Triangle, 이등변삼각형 IsoTriangle, 정삼각형 RegularTriangle
- * => 위의 9개의 클래스를 설계하시오!
+ * => 클래스를 설계하시오!
  * --------------------------------------------------------------------
  */
 
@@ -66,14 +65,3 @@ class Rectangle extends Rectangle {
 		super(width, width);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
