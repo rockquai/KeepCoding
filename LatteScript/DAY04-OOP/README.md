@@ -10,7 +10,7 @@
 - 상속성(Inheritance) : 클래스는 다른 클래스로부터 특성들을 상속받을 수 있다.
 - 다형성(Polymorphism) : 다른 클래스들이 같은 메서드나 속성으로 정의될 수 있다.
 
-### OOP의 꽃은 
+### OOP의 꽃은
 - 사람이 코드를 이해하기 쉽도록 읽고, 쓰고, 확장하는데 human readable.
 - 핵심은 현실의 사물, 개념을 모델링할 수 있는 장점.
 - 추상적인 개념을 모델링을 할 방법이 필요함 <br>
@@ -56,12 +56,12 @@ try {
 }
 
 console.log(print());
-````
+```
 
 #### 객체지향 프로그래밍
 1. `constructor(){}`  생성
-2. `constructor(){}` 안에서 `this.함수`를 선언하면 인스턴스 생성될 때마다 생성이 된다 
-ㄴ> 만약 인스턴스가 100라면 함수가 100개 된다. `메모리 낭비`. ==> 공통적인 메소드 생성해야 한다.
+2. `constructor(){}` 안에서 `this.함수`를 선언하면 인스턴스 생성될 때마다 생성이 된다 <br>
+ㄴ> 만약 인스턴스가 100라면 함수가 100개 된다. `메모리 낭비`. ==> 공통적인 메소드 생성해야 한다.<br>
 3. 인스턴스가 없는 `클래스속성` 혹은 `스태틱속성`이라고 부른다. 스태틱 키워드를 작성하여 스태틱 메소드를 작성할 수 있다.
 
 ```js
@@ -76,9 +76,9 @@ class AccoutBook {
 		this.name = name;
 		this.author = author;
 		this.list = [];
-		this.total = 0; 
+		this.total = 0;
 		// constructor 인에 있는 this는 생성하는 인스턴스.
-		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다. 
+		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다.
 	}
 
 	deposit(comment, amount) {
@@ -87,7 +87,7 @@ class AccoutBook {
 		}
 		this.total += amount;
 		this.list.push({
-			comment: comment, 
+			comment: comment,
 			amount: amount
 		});
 	}
@@ -120,7 +120,7 @@ var ac2 = new AccoutBook('장부2', 'B군');
 AccoutBook.printAll();
 ```
 
-#### 상속성(Inheritance) & 다형성(Polymorphism) 
+#### 상속성(Inheritance) & 다형성(Polymorphism)
 ```js
 class Life {}
 class Animal extends Life {}
@@ -151,10 +151,10 @@ class Dog extends Animal {
 		// this.age = age;
 
 		// Dog가 상속받고 있는 `Animal클래스`에 생성자를 이용하고 싶을 때는 예약어 `super()` 사용.  
-		super(name, age); 
+		super(name, age);
 		this.race = race;
 	}
-	
+
 	// `speak()` 자체를 덮여쓸 수 있다.(상속받는 속성, 메소드를 덮여쓸 수 있다.) => `메소드 오버라이딩,(method overriding)`이라고 부른다
 	speak() {
 		super.speak();  // 부모 클래스의 메소드를 호출 할 수도 있다.
@@ -169,7 +169,7 @@ class Cat extends Animal {
 		console.log(`meow! meow!, ${this.name}`);
 	}
 }
- 
+
 var animals = [
 	new Dog('멍멍이', 11, '포메라니안'),
 	new Cat('야옹이', 10)
