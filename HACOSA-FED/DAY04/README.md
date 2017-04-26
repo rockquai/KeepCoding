@@ -6,6 +6,7 @@
 - Ojbect
 - this
 - prototype
+- new Date()
 
 ### Q. 배열의 숫자를 모두 더하는 sum함수를 만드시오.
 
@@ -169,7 +170,9 @@ function tt() {
 tt();
 ```
 
-### new Date();
+---
+
+### new Date()
 - 항상 새로운 값을 리턴해야하므로 `new`로 처리한다.
 
 ```js
@@ -177,7 +180,6 @@ function getWeekDay(){
     return new Date().getDay(); // 각각의 요일은 숫자로 리턴된다.
 }
 ```
-
 
 #### 오늘의 요일을 숫자가 아닌 요일명으로 나오도록 함수를 만들어라.
 
