@@ -1,6 +1,6 @@
 ###### 하드코딩하는 사람들 Front-End 스터디 - 12주
 
-### INDEX
+### Table of Contents
 
 - [DAY01](./DAY01/README.md)<br>
 	- 값, 식을 구분 하고 적절하게 사용 할 수 있다. <br>
@@ -33,3 +33,13 @@
     - 일급 객체 (first-class citizens)<br>
     - 클로저 (Closures)<br>
     - 고차함수(Higher Order Function), 콜백함수(Callback)<br>
+
+- [DAY06](./DAY06/README.md)<br>
+	- Git & Github
+	- CLI
+	- IntelliJ IDEA
+
+- [DAY07](./DAY07/README.md)<br>
+	- Node.js
+	- npm
+	- Express
