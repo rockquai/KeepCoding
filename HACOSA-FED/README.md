@@ -43,3 +43,9 @@
 	- Node.js
 	- npm
 	- Express
+
+- [DAY08](./DAY08/README.md)<br>
+	- HTML 바로보기
+	- ECMAScript 6(ES6, ECMAScript 2015)
+	- Babel
+	- Webpack
