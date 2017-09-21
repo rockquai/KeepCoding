@@ -5,10 +5,13 @@
 ##### [출처-http://workshop.benzen.io/](https://www.youtube.com/watch?v=lrWytzsH8hw&t=2309s)
 
 ## [객체지향 프로그래밍(Object-oriented programming)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- 객체 지향 프로그래밍(OOP)에서 `인스턴스(instance)는 해당 클래스의 구조로 컴퓨터 저장공간에서 할당된 실체`를 의미.
+- `클래스`는 속성(property)과 행위(Method)로 구성된 일종의 `설계도`이다. OOP에서 객체는 클래스와 인스턴스를 포함한 개념이다.
 - 추상화(Abstraction) : 복잡한 상속, 메서드, 객체의 속성의 결합은 반드시 현실 세계를 시뮬레이션할 수 있어야 한다.
 - 캡슐화(Encapsulation) : 클래스는 해당 객체의 특성들만을 정의할 수 있고, 메서드는 그 메서드가 어떻게 실행되는지만 정의할 수 있다. (외부 접근 불가)
 - 상속성(Inheritance) : 클래스는 다른 클래스로부터 특성들을 상속받을 수 있다.
 - 다형성(Polymorphism) : 다른 클래스들이 같은 메서드나 속성으로 정의될 수 있다.
+- [출처] [인스턴스](https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99))
 
 ### OOP의 꽃은
 - 사람이 코드를 이해하기 쉽도록 읽고, 쓰고, 확장하는데 human readable.

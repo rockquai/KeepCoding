@@ -18,7 +18,7 @@
 // function AccoutBook(name) {
 // 	this.name = name;
 // 	this.list = [];
-// 	this.total = 0; 
+// 	this.total = 0;
 // 	this.deposit = function(comment, amount) {
 // 		this.list.push({
 // 			comment : comment,
@@ -36,7 +36,7 @@
 /**
  * --------------------------------
  * ex.1
- * 문제점 
+ * 문제점
  * - ac1, ac2의 속성(name, list, totoal)의 내용은 다른 것이 맞는데, deposit, print 함수는 다를 필요가 없다.
  * ==> 메모리상에 ac1, ac2에 deposit, print 함수가 각각 존재한다. 메모리 낭비. deposit, print 함수는 재사용이 필요.
  * ==> deposit, print 함수를 `constructor`처럼 만들어야 한다.
@@ -58,7 +58,7 @@
 // 			}
 // 			this.total += amount;
 // 			this.list.push({
-// 				comment: comment, 
+// 				comment: comment,
 // 				amount: amount
 // 			});
 // 		};
@@ -91,13 +91,13 @@
  * ==============================================================================================
  * 미션2. 생성된 ac1, ac2,... 객체가 생성될 때마다 자동으로 출력하는 함수. (=생성된 모든 장부를 기억하고 출력한다.)
  * 1. 모든 장부를 생성 할 때마다 기억하고 === 어떤 메모리상에 공간에 담아둔다.  === 배열에 담아둔다
-	ㄴ> [해석하면] 생성자 안에서 장부 인스턴스를 배열에 담아둔다. 
+	ㄴ> [해석하면] 생성자 안에서 장부 인스턴스를 배열에 담아둔다.
  * 2. 어떤 함수를 호출했을때 기억한 장부들을 프린트 한다
  * ==============================================================================================
- * 문제점 
+ * 문제점
  ㄴ 1. var instances = []; 전역에 생성
  ㄴ 2. 만약에 ac1, ac2같은 객채가 생성이 되지 않았을 때. 자동 출력되는 printAll() 함수가 호출을 할 수 가 없다.
-       printAll()함수는 인스턴스에 메달려 잇는 속성이다. (= 인스턴스가 없을 때 printAll() 함수가 호출 할 수 없다.)
+       printAll()함수는 인스턴스에 메달려 있는 속성이다. (= 인스턴스(ac1, ac2)가 없을 때 printAll() 함수가 호출 할 수 없다.)
        AccountBook.printAll(); ==> 접근이 할 수 없다.
  * -----------------------------------------------------------------------------------------------
  */
@@ -109,9 +109,9 @@
 // 	constructor(name) {
 // 		this.name = name;
 // 		this.list = [];
-// 		this.total = 0; 
+// 		this.total = 0;
 // 		// constructor 인에 있는 this는 생성하는 인스턴스.
-// 		instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다. 
+// 		instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다.
 // 	}
 // 	deposit(comment, amount) {
 // 		if ( this.total + amount  < 0 ) {
@@ -119,7 +119,7 @@
 // 		}
 // 		this.total += amount;
 // 		this.list.push({
-// 			comment: comment, 
+// 			comment: comment,
 // 			amount: amount
 // 		});
 // 	};
@@ -145,7 +145,7 @@
 // ac1.deposit('월급', -150);
 // var ac2 = new AccoutBook('장부2');
 
-// ac1.printAll(); 
+// ac1.printAll();
 // AccountBook.printAll(); // 접근이 할 수 없다.
 
 /**
@@ -159,9 +159,9 @@
 // 	constructor(name) {
 // 		this.name = name;
 // 		this.list = [];
-// 		this.total = 0; 
+// 		this.total = 0;
 // 		// constructor 인에 있는 this는 생성하는 인스턴스.
-// 		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다. 
+// 		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다.
 // 	}
 
 // 	deposit(comment, amount) {
@@ -170,7 +170,7 @@
 // 		}
 // 		this.total += amount;
 // 		this.list.push({
-// 			comment: comment, 
+// 			comment: comment,
 // 			amount: amount
 // 		});
 // 	}
@@ -186,7 +186,7 @@
 // 	}
 
 // 	// 인스턴스가 없는 class 바로 호출할 수 있는 속성을 `클래스 속성(스태틱 속성)`이라고 부른다.
-// // 
+// //
 // 	static printAll() {
 // 		for( var i=0; i < AccoutBook.instances.length; i++ ) {
 // 			var accountBook = AccoutBook.instances[i];
@@ -217,9 +217,9 @@ class AccoutBook {
 		this.name = name;
 		this.author = author;
 		this.list = [];
-		this.total = 0; 
+		this.total = 0;
 		// constructor 인에 있는 this는 생성하는 인스턴스.
-		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다. 
+		AccoutBook.instances.push(this); // 생성되는 인스턴스를 배열로 담아둔다.
 	}
 
 	deposit(comment, amount) {
@@ -228,7 +228,7 @@ class AccoutBook {
 		}
 		this.total += amount;
 		this.list.push({
-			comment: comment, 
+			comment: comment,
 			amount: amount
 		});
 	}
@@ -244,7 +244,7 @@ class AccoutBook {
 	}
 }
 
-// 인스턴스가 없이 클래슬 바로 호출할 수 있는 것을 클래식속성(=스태틱속성)
+// 인스턴스가 없이 클래스를 바로 호출할 수 있는 것을 클래식속성(=스태틱속성)
 AccoutBook.instances = [];
 AccoutBook.printAll = function() {
 	for( var i=0; i < AccoutBook.instances.length; i++ ) {
