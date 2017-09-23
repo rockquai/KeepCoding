@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "author": "김수호",
+    "avatar": "http://react.semantic-ui.com/assets/images/avatar/small/steve.jpg",
+    "text": "공부합시다",
+    "faves": 10,
+    "date": 1497772065108
+  },
+  {
+    "id": "2",
+    "author": "김태균",
+    "avatar": "http://react.semantic-ui.com/assets/images/avatar/small/joe.jpg",
+    "text": "아메바 오지마세요",
+    "faves": 5,
+    "date": 1497772065108
+  },
+  {
+    "id": "3",
+    "author": "김정현",
+    "avatar": "http://react.semantic-ui.com/assets/images/avatar/small/christian.jpg",
+    "text": "시험보러 일찍 갑니다. 수고하세요.",
+    "faves": 7,
+    "date": 1497772065108
+  },
+  {
+    "id": "4",
+    "author": "배수향",
+    "avatar": "http://react.semantic-ui.com/assets/images/avatar/small/stevie.jpg",
+    "text": "수호님 질문이 있는데요",
+    "faves": 19,
+    "date": 1497772065108
+  },
+  {
+    "id": "5",
+    "author": "1111",
+    "avatar": "http://react.semantic-ui.com/assets/images/avatar/small/stevie.jpg",
+    "text": "수호님 질문이 있는데요",
+    "faves": 19,
+    "date": 1497772065108
+  }
+]
