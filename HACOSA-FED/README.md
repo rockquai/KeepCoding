@@ -52,5 +52,8 @@
 	- Babel
 	- Webpack
 
-- [DAY10](./DAY10/README.md)<br>
-	- react
+- [DAY11](./DAY11/react-chat)<br>
+	- react chat 1
+
+- [DAY12](./DAY12/react-chat)<br>
+	- react chat 2
